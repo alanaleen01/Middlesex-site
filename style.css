@@ -15,6 +15,7 @@ body {
 /* Headings */
 h1 {
  color: #1AA3B8;
+ text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
  font-size: 2rem;
  border-bottom: 2px solid #1AA3B8;
  padding-bottom: 0.4rem;
@@ -23,6 +24,8 @@ h2 {
  color: #1AA3B8;
  font-size: 1.3rem;
  margin-top: 0;
+ -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+ box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 /* Links */
 a {
@@ -31,6 +34,7 @@ a {
 }
 a:hover {
  text-decoration: underline;
+
 }
 /* Navigation */
 nav {
@@ -42,12 +46,17 @@ img {
  max-width: 100%;
  display: block;
  margin: 1rem 0;
+ border: 2px dotted #0ca0b7;
+ border-radius: 8px;
+ padding: 1.2rem 1.5rem;
+ margin-bottom: 1.2rem;
+
 }
 
 /* Card style — applies to all three .favorite divs */
 .favorite {
  background-color: #FFFFFF;
- border: 2px solid #18a2b7;
+ border: 2px solid #eb89e0;
  border-radius: 8px;
  padding: 1.2rem 1.5rem;
  margin-bottom: 1.2rem;
@@ -55,4 +64,41 @@ img {
 /* Remove top margin from the very first card */
 .favorite:first-child {
  margin-top: 0;
+}
+
+.favorite:hover {
+ text-decoration: underline;
+}
+
+thead {
+ color: #f4f4f4;
+ text-shadow: 3px 5px 2px #474747;
+ font-size: 1.5rem;
+ border-bottom: 2px solid #1349de;
+ padding-bottom: 0.4rem;
+ background-color: #1b73ef;
+ border: 2px solid #182bb7;
+ border-radius: 8px;
+ padding: 1.2rem 1.5rem;
+ margin-bottom: 1.2rem;
+}
+tbody {
+ color: #bccaed;
+ font-size: 1rem;
+ padding-bottom: 2rem;
+ background-color: #4c61cb;
+ border: 2px dashed #eeeeee;
+ border-radius: 15px;
+ padding: 1.2rem 1.5rem;
+ margin-bottom: 1.2rem;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #4a73f0;
+    color: #abb7e8
+}
+tbody tr:nth-child(even) {
+    background-color: #abb7e8;
+    color: #4a73f0;
+    font-size: 1rem;
 }
