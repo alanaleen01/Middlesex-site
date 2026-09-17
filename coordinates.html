@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Coord of Middlesex County, MA</title>
+ <link rel="stylesheet" href="style.css">
+
+ </head>
+ <body>
+ <h1>Are you in my County?</h1>
+ <p>Enter in coordinates to see if you are in the bounds of Middlesex County!</p>
+ <label for="lat-input">Latitude:</label>
+ <input type="text" id="lat-input">
+
+ <label for="lon-input">Longitude:</label>
+ <input type="text" id="lon-input" placeholder="US longitudes are negative">
+
+ <button onclick = "checkCoords()">Check Coordinates</button>
+ <div id="result"></div>
+
+ 
+<script src="js/coordinates.js"></script>
+ </body>
+</html>

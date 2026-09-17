@@ -102,3 +102,28 @@ tbody tr:nth-child(even) {
     color: #4a73f0;
     font-size: 1rem;
 }
+
+input {
+    width: 230px;
+    padding: 1rem;
+    border: 2px solid #eeeeee;
+    font-size: 1rem;
+    margin: 5px;
+}
+
+button {
+    width: 230px;
+    padding: 1rem;
+    border: 2px solid #a4ede7;
+    background-color: #8accd6;
+    font-size: 1rem;
+    margin: 5px;
+}
+button:hover {
+ text-decoration: underline;
+ background-color: #0ca0b7;
+}
+
+.hidden { 
+    display: none; 
+}
