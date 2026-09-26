@@ -1,3 +1,9 @@
+
+const checkBtn = document.querySelector("#check-btn");
+const resultDiv = document.querySelector("#result");
+
+
+
 const myCounty = {
     name:   "Middlesex County",
     state:  "Massachusetts", 
@@ -7,9 +13,13 @@ const myCounty = {
     ymax: 42.736554
 }
 console.log(myCounty.xmin, myCounty.xmax, myCounty.ymin, myCounty.ymax);
+const midPoint = (myCounty.ymin + myCounty.ymax) / 2;
 
-function checkCoords() {
- // Read input values from the form (provided)
+
+checkBtn.addEventListener("click", () => {
+resultDiv.classList.remove("result-inside", "result-outside");
+
+    // Read input values from the form (provided)
 let latInput = document.getElementById('lat-input').value;
 let lonInput = document.getElementById('lon-input').value;
  // STEP A: Convert strings to numbers using parseFloat()
@@ -25,7 +35,7 @@ let lonInput = document.getElementById('lon-input').value;
  let statement = "";
  if(isNaN(latInput) || isNaN(lonInput)){
     statement = "Please	enter	valid	numbers for latitude	and longitude. "
-    document.getElementById('result').textContent = statement;
+    document.c('result').textContent = statement;
     return;
  } 
 
@@ -34,13 +44,61 @@ let lonInput = document.getElementById('lon-input').value;
  // inside all four edges of your county. Use the && operator.
  // Declare a variable called result and assign your message inside each branch.
  // Your code here:
+let result2message = "";
 let result = "";
  if(myCounty.ymin <= latInput && latInput <= myCounty.ymax && myCounty.xmin <= lonInput && lonInput <= myCounty.xmax){
     result = "YES! Those coordinates are INSIDE Middlesex County!";
+    resultDiv.classList.add("result-inside")
+    if(latInput < midPoint){
+   result2message = " You're in the southern half of Middlesex County";
+   } else{
+   result2message = " You're in the northern half of Middlesex County";
+   }
  } else{
     result = "NO. Those coordinates are OUTSIDE Middlesex County!";
- }
-document.getElementById('result').textContent = result;
+        resultDiv.classList.add("result-outside")
 
-}
+ }
+
+ result += result2message;
+ resultDiv.textContent = result;
+})
+
+
+
+//function checkCoords() {
+//  // Read input values from the form (provided)
+// let latInput = document.getElementById('lat-input').value;
+// let lonInput = document.getElementById('lon-input').value;
+//  // STEP A: Convert strings to numbers using parseFloat()
+//  // Your code here:
+//  latInput = parseFloat(latInput);
+//  lonInput = parseFloat(lonInput);
+
+
+//  // STEP B: Validate — check that both values are actual numbers
+//  // Hint: isNaN() returns true if the value is not a number
+//  // If either input is invalid, set a helpful message and return early
+//  // Your code here:
+//  let statement = "";
+//  if(isNaN(latInput) || isNaN(lonInput)){
+//     statement = "Please	enter	valid	numbers for latitude	and longitude. "
+//     document.getElementById('result').textContent = statement;
+//     return;
+//  } 
+
+//  // STEP C: Check the boundaries using your myCounty object
+//  // Write an if/else that checks whether both coordinates fall
+//  // inside all four edges of your county. Use the && operator.
+//  // Declare a variable called result and assign your message inside each branch.
+//  // Your code here:
+// let result = "";
+//  if(myCounty.ymin <= latInput && latInput <= myCounty.ymax && myCounty.xmin <= lonInput && lonInput <= myCounty.xmax){
+//     result = "YES! Those coordinates are INSIDE Middlesex County!";
+//  } else{
+//     result = "NO. Those coordinates are OUTSIDE Middlesex County!";
+//  }
+//document.getElementById('result').textContent = result;
+
+//}
 

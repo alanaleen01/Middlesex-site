@@ -8,13 +8,27 @@
  </head>
  <body>
  <h1>Middlesex County, Massachusetts</h1>
- <p>
+ <p id="county-desc">
  Middlesex County has the largest population in Massachusetts and New England,
  with 1,632,002 people. The county seat is Lowell and Cambridge.
  </p>
  <p>
  Founded in 1643, Middlesex County is located in the Commonwealth of Massachusetts.
  </p>
+ 
+<button id="toggle-btn">Hide Station</button>
+
+ <div id="station-section">
+ <h2>Radio Station Signal Check</h2>
+ <p id="station-result"></p>
+ <p id="station-detail"></p>
+</div>
+
+<button id="water-pic-btn">Show Photo</button>
+<div id="water-photo">
+<h2>The Arlington, MA Reservoir, this is where I used to teach swim lessons!</h2>
+</div>
+
 
  <img src="img/massachusettsmap.jpeg" alt="Map of Middlesex County">
  <a target="_blank" rel="noopener noreferrer" 
@@ -22,7 +36,10 @@
 
  <nav>
  <a href="towns.html">Notable Towns</a> |
- <a href="mytown.html">My Favorite Places</a>
+ <a href="mytown.html">My Favorite Places</a> |
+ <a href="coordinates.html">Coordinate Checker!</a>
  </nav>
+ <script src="js/county.js"></script>
+ <script src="js/dom.js"></script>
  </body>
 </html>

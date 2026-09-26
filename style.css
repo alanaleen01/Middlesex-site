@@ -39,7 +39,21 @@ a:hover {
 /* Navigation */
 nav {
  margin-top: 2rem;
- font-size: 0.95rem;
+ font-size: 1rem;
+}
+
+nav a:hover {
+    margin-top: 2rem;
+    font-size: 1rem;
+    text-decoration: underline;
+    color: #bccaed;
+
+    
+}
+
+nav:hover {
+    color: #bccaed;
+    text-decoration: underline;
 }
 /* Images */
 img {
@@ -126,4 +140,12 @@ button:hover {
 
 .hidden { 
     display: none; 
+}
+
+.result-inside {
+    color: rgb(87, 218, 87);
+}
+
+.result-outside {
+    color: rgb(248, 99, 99)
 }
