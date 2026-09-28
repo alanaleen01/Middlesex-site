@@ -1,16 +1,25 @@
-// const county1 = {
-//     name:   "Middlesex County", // county name
-//     state:  "Massachusetts", // state
-//     population: 1632002, // current population
-//     seat:   "Lowell and Cambridge", // county seat
-//     founded: 1643, // year founded
-//     areaSqMi: 847.0, // area in square miles
-//     myTown: "Arlington, MA", // your hometown
-//     largestMunicipality: {
-//         name: "Cambridge", // fill in
-//         population: 120000 // fill in
-//     }
-// };
+let imageShown = false;
+let imageRef = null;
+
+const waterPicBtn = document.querySelector("#water-pic-btn");
+const waterPhoto = document.querySelector("#water-photo");
+waterPicBtn.addEventListener("click", () => {
+    if(!imageShown){
+        imageRef = document.createElement("img");
+        imageRef.src = "https://iconsofarlington.com/wp-content/uploads/2019/08/2019-08-25-dog-days-at-the-rez-001-1.jpg";
+        imageRef.alt = "Arlington Reservoir Beach Photo"
+        waterPhoto.append(imageRef);
+        waterPicBtn.textContent = "Hide Photo";
+        imageShown = true;
+    } else{
+        imageRef.remove();
+        imageRef = null;
+        waterPicBtn.textContent = "Show Photo";
+        imageShown = false; 
+    }
+    
+});
+
 
 const station = {
     callsign: "WXVU",
